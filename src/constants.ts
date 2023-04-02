@@ -1,2 +1,2 @@
-export const GITHUB_PROFILE = 'https://www.github.com/hakkaofdev';
-export const WEBSITE = 'https://www.hakkaofdev.fr';
+export const GITHUB_PROFILE = 'tg://resolve?domain=@Dian117';
+export const WEBSITE = '#';

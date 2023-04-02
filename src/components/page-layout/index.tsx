@@ -52,7 +52,7 @@ const PageLayout = ({ title, description, children }: PageProps) => {
               url: 'https://www.hakkaofdev.fr/assets/images/social.png',
               width: 1200,
               height: 630,
-              alt: 'Alexandre Gossard',
+              alt: 'Wake up Neo',
               type: 'image/png',
             },
           ],

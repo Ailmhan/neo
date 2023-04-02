@@ -1,5 +1,7 @@
 import ExternalLink from '@/components/external-link';
 import PageLayout from '@/components/page-layout';
+import NextLink from 'next/link';
+import TypeIt from "typeit-react";
 import {
   Button,
   Center,
@@ -33,8 +35,8 @@ const IndexPage = () => {
 
   return (
     <PageLayout
-      title='Home'
-      description='Discover a starter kit which includes Next.js, Chakra-UI, Framer-Motion in Typescript. You have few components, Internationalization, SEO and more in this template ! Enjoy coding.'
+      title='Wake Up Neo'
+      description='Innovatoin technology.'
     >
       <Stack
         spacing={4}
@@ -50,11 +52,23 @@ const IndexPage = () => {
           w={{ base: '100%', md: '50%' }}
           py={{ base: 20, md: 0 }}
         >
-          <Heading as='h1'>Alexandre GOSSARD</Heading>
-          <Divider />
 
+        <Heading style={{fontFamily: 'monospace'}}>
+<Text style={{color: '#0BA7CF', fontFamily: 'monospace', textAlign: 'justify'}}>
+<TypeIt
+options={{ loop: true }}
+getBeforeInit={(instance) => {
+instance.type("Wake up Neo").pause(750).delete(12).pause(500).
+type("you in the matrix").delete(18).pause(500).
+type("follow the white rabbit");
+return instance;
+}}
+/>
+</Text>
+</Heading>
+  <Divider />
           <Text color='gray.500' align='justify'>
-            <Trans i18nKey='excerpt'>
+          <Trans i18nKey='excerpt'>
               <strong>Student</strong> by day, <strong>mad developer</strong> by
               night. Passionate about computer science and{' '}
               <strong>new technologies</strong>, currently{' '}
@@ -65,37 +79,38 @@ const IndexPage = () => {
               , I develop in order to propose different{' '}
               <strong>opensource</strong> contents.
             </Trans>
-          </Text>
+</Text>
           <HStack
             spacing={4}
             w='full'
             justify={{ base: 'center', md: 'flex-start' }}
           >
-            <Link href={WEBSITE} isExternal>
+ <NextLink href='/@components/NotFoundPage' passHref>
+          
               <Button
                 colorScheme='brand'
                 variant='ghost'
                 rightIcon={<ImSphere />}
               >
-                Website
+                Portfolio
               </Button>
-            </Link>
-            <Link href={GITHUB_PROFILE} isExternal>
+              </NextLink>
+           <NextLink href="/@components/AboutUsPage" passHref>
               <Button
                 colorScheme='brand'
                 variant='ghost'
                 rightIcon={<FiExternalLink />}
               >
-                Github
+                About us
               </Button>
-            </Link>
+            </NextLink>
           </HStack>
         </VStack>
         <Center w={{ base: '100%', md: '50%' }}>
           <CustomImage
-            src='/assets/images/home.jpg'
-            width={300}
-            height={500}
+            src='/assets/images/some.gif'
+            width={350}
+            height={250}
             alt='Cover Image'
           />
         </Center>

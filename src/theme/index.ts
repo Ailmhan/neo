@@ -1,10 +1,11 @@
 import { extendTheme, theme as base } from '@chakra-ui/react';
 import { mode } from '@chakra-ui/theme-tools';
+import "@fontsource/cascadia-code"
 
 const styles = {
   global: (props) => ({
     body: {
-      bg: mode('#fff', '#2d3142')(props),
+      bg: mode('black', '#fff')(props),
     },
   }),
 };
@@ -13,11 +14,11 @@ const colors = {
   brand: {
     50: '#f6e8ff',
     100: '#e3bdff',
-    200: '#cd94ff',
+    200: '#0BA7CF',
     300: '#b46ef7',
-    400: '#9a4ce7',
-    500: '#7e31ce',
-    600: '#641eab',
+    400: 'white',
+    500: '#0BA7CF',
+    600: '#0BA7CF',
     700: '#4b1483',
     800: '#341158',
     900: '#1e0d2d',
@@ -25,7 +26,11 @@ const colors = {
 };
 
 const fonts = {
-  heading: `Josefin Sans, ${base.fonts.heading}`,
+  heading: `Wake Up Neo, ${base.fonts.heading}`,
+  fonts: {
+    heading: "Cascadia Code",
+    body: "Cascadia Code",
+  },
 };
 
 const components = {
@@ -41,7 +46,7 @@ const components = {
 };
 
 const config = {
-  initialColorMode: 'light',
+  initialColorMode: 'dark',
   useSystemColorMode: false,
 };
 
